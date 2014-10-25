@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <meta name="description" content="Baidusuggestion : JavaScript">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Baidusuggestion by TimTsang</title>
+    <title>Baidusuggestion</title>
   </head>
 
   <body>
-    <header>
-      <div class="inner">
-        <h1>Baidusuggestion</h1>
-        <h2>JavaScript</h2>
-        <a href="https://github.com/TimTsang/BaiduSuggestion" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/TimTsang/BaiduSuggestion">View on GitHub</a>
+
+          <h1 id="project_title">Baidusuggestion</h1>
+          <h2 id="project_tagline">JavaScript</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/TimTsang/BaiduSuggestion/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/TimTsang/BaiduSuggestion/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
 <a name="baidusuggestion" class="anchor" href="#baidusuggestion"><span class="octicon octicon-link"></span></a>BaiduSuggestion</h1>
 
 <h1>
@@ -248,9 +251,9 @@
 <ol>
 <li>实现发jsonp，跨域请求js
 有了开始时的想法，做完雏形后，就开始想是否可以向百度后台发请求，实现suggestion。于是就开始看百度搜索时到底向后发送了什么请求。打开Firebug，看到输入“百”后，貌似向后台发了两条请求
-<img src="http://img.blog.csdn.net/20140914111950781?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltX3RzYW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="此处输入图片的描述">
+<img src="http://img.blog.csdn.net/20140914111950781?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltX3RzYW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="">
 打开请求看了好久，也没看出点什么，未果，然后就打开“百度”，搜索了一番，发现了有用jsonp可以利用关键字获取百度suggestion数据的博文，认真的看了一番之后，发现了关键在向百度后台提交关键字的URL，在哪传值和如何获取返回的suggestion数据。然后试着直接访问<a href="http://suggestion.baidu.com/su">http://suggestion.baidu.com/su</a>
-<img src="http://img.blog.csdn.net/20140914112145878?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltX3RzYW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="此处输入图片的描述">
+<img src="http://img.blog.csdn.net/20140914112145878?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltX3RzYW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="">
 下载后打开，发现了文件中只有一段行代码</li>
 </ol>
 </li>
@@ -287,7 +290,7 @@
 </pre></div>
 
 <p>最终效果如下
-<img src="http://img.blog.csdn.net/20140914120227406?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltX3RzYW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="此处输入图片的描述">
+<img src="http://img.blog.csdn.net/20140914120227406?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltX3RzYW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="">
 用console.dir(strurls)将接收到的数据打印在控制台上也看到了返回的suggestion数据。</p>
 
 <h3>
@@ -301,41 +304,34 @@
 </li>
 </ol>
 
-<p><img src="http://img.blog.csdn.net/20140914120732312?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltX3RzYW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="此处输入图片的描述"></p>
+<p><img src="http://img.blog.csdn.net/20140914120732312?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltX3RzYW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
 
 <p>于是就试着去写一下，在</p>标签里加上了一句action="<a href="http://www.baidu.com/s%22%EF%BC%8C%E4%BD%86%E6%98%AF%EF%BC%8C%E6%8F%90%E4%BA%A4%E4%BA%86%E4%B9%8B%E5%90%8E%E5%8D%B4%E5%8F%98%E6%88%90%E7%99%BE%E5%BA%A6%E9%A6%96%E9%A1%B5%EF%BC%8C%E5%B9%B6%E6%B2%A1%E6%9C%89%E6%90%9C%E7%B4%A2%E3%80%82%E4%BA%8E%E6%98%AF%EF%BC%8C%E6%88%91%E5%8F%88%E6%89%93%E5%BC%80Firebug%EF%BC%8C%E6%9F%A5%E7%9C%8B%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2%E7%9A%84%E4%BC%A0%E5%80%BC%E6%83%85%E5%86%B5">http://www.baidu.com/s"，但是，提交了之后却变成百度首页，并没有搜索。于是，我又打开Firebug，查看百度搜索的传值情况</a>
 
-<p><img src="http://img.blog.csdn.net/20140914121429891?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltX3RzYW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="此处输入图片的描述"></p>
+<p><img src="http://img.blog.csdn.net/20140914121429891?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltX3RzYW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
 
 <p>发现有两个参数有我要搜索的字段“百度云”，分别是“bs”和“wd”
 于是我就将输入框的mane的值改成以上两个值去试。发现“wd”就是关键字对应的字段，再查看了一下地址栏果然也没错，有传值。</p>
 
-<p><img src="http://img.blog.csdn.net/20140914121537517?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltX3RzYW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="此处输入图片的描述"></p>
+<p><img src="http://img.blog.csdn.net/20140914121537517?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltX3RzYW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
 
 <p>然后我再试着直接去修改百度搜索地址栏的值</p>
 
-<p><img src="http://img.blog.csdn.net/20140914121819367?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltX3RzYW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="此处输入图片的描述"></p>
+<p><img src="http://img.blog.csdn.net/20140914121819367?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltX3RzYW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="效果图"></p>
 
 <p>发现搜索果然出现了，原来“wd”就是百度后台接受搜索关键字的字段。</p>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/TimTsang/BaiduSuggestion/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/TimTsang/BaiduSuggestion/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/TimTsang/BaiduSuggestion"></a> is maintained by <a href="https://github.com/TimTsang">TimTsang</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+      </section>
     </div>
 
-  
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Baidusuggestion maintained by <a href="https://github.com/TimTsang">TimTsang</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
   </body>
 </html>
