@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<!--导入css样式文件-->
+		<link rel="stylesheet" type="text/css" media="all" href="css/baidu_suggestion.css"/>
+		<!--导入JQuery-->
+		<script type="text/javascript" src="js/jquery-1.3.1.js"></script>
+		<title>百度suggestion</title>
+	</head> 
+<body> 
+	<div id="main_box">
+		<div id="head">
+			<p>
+				<img width="270" height="129" src="imges/bd_logo.png" hidefocus="true">
+			</p>
+			<form id="form" action="http://www.baidu.com/s" method="get" accept-charset="utf-8" name="myForm">
+				<div id="span_search">
+					<input type="text" id="input_search" autocomplete="off" maxlength="100" name="wd" onkeyup="keyEvent(event);">
+					<div id="suggestion_div"> 
+						<ul id="suggestions_ul"></ul> 
+					</div> 
+				</div>
+					<input id="input_button" type="submit" value="百度一下" >
+			</form>
+			<script type="text/javascript" src="js/baidu_suggestion.js"></script>
+		</div>
+		<div id="nav">
+			<a class="mnav" href="http://news.baidu.com">新闻</a>
+			<a class="mnav" href="http://www.hao123.com">hao123</a>
+			<a class="mnav" href="http://map.baidu.com">地图</a>
+			<a class="mnav" href="http://v.baidu.com">视频</a>
+			<a class="mnav" href="http://tieba.baidu.com">贴吧</a>
+			<a class="lb" href="#">登录</a>
+			<a class="pf" href="#">设置</a>
+			<a class="bri" href="#">更多产品</a>
+		</div>
+	</div>
+</body> 
+</html>
