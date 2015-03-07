@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <meta name="description" content="Baidusuggestion : JavaScript">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Baidusuggestion by TimTsang</title>
+    <title>Baidusuggestion</title>
   </head>
 
   <body>
-    <header>
-      <div class="inner">
-        <h1>Baidusuggestion</h1>
-        <h2>JavaScript</h2>
-        <a href="https://github.com/TimTsang/BaiduSuggestion" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
-<a name="baidusuggestion" class="anchor" href="#baidusuggestion"><span class="octicon octicon-link"></span></a>BaiduSuggestion</h1>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/TimTsang/BaiduSuggestion">View on GitHub</a>
+
+          <h1 id="project_title">Baidusuggestion</h1>
+          <h2 id="project_tagline">JavaScript</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/TimTsang/BaiduSuggestion/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/TimTsang/BaiduSuggestion/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="baidusuggestion" class="anchor" href="#baidusuggestion" aria-hidden="true"><span class="octicon octicon-link"></span></a>BaiduSuggestion</h1>
 
 <h1>
-<a name="javascript%E5%AE%9E%E7%8E%B0%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2suggestion%E5%8A%9F%E8%83%BD" class="anchor" href="#javascript%E5%AE%9E%E7%8E%B0%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2suggestion%E5%8A%9F%E8%83%BD"><span class="octicon octicon-link"></span></a>JavaScript实现百度搜索suggestion功能</h1>
+<a id="javascript实现百度搜索suggestion功能" class="anchor" href="#javascript%E5%AE%9E%E7%8E%B0%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2suggestion%E5%8A%9F%E8%83%BD" aria-hidden="true"><span class="octicon octicon-link"></span></a>JavaScript实现百度搜索suggestion功能</h1>
 
 <hr>
 
@@ -57,12 +60,12 @@
 <hr>
 
 <h2>
-<a name="%E4%B8%80%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90" class="anchor" href="#%E4%B8%80%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90"><span class="octicon octicon-link"></span></a>一、需求分析</h2>
+<a id="一需求分析" class="anchor" href="#%E4%B8%80%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90" aria-hidden="true"><span class="octicon octicon-link"></span></a>一、需求分析</h2>
 
 <p><img src="http://img.blog.csdn.net/20140914104219853?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltX3RzYW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="百度suggestion的效果图"></p>
 
 <h3>
-<a name="-%E5%9F%BA%E6%9C%AC%E9%9C%80%E6%B1%82" class="anchor" href="#-%E5%9F%BA%E6%9C%AC%E9%9C%80%E6%B1%82"><span class="octicon octicon-link"></span></a>① 基本需求：</h3>
+<a id="-基本需求" class="anchor" href="#-%E5%9F%BA%E6%9C%AC%E9%9C%80%E6%B1%82" aria-hidden="true"><span class="octicon octicon-link"></span></a>① 基本需求：</h3>
 
 <ol>
 <li>在输入框输入关键字后，出现下拉框，下拉框中为suggestion的内容。根据不同的关键字，显示不同的suggestion。</li>
@@ -72,7 +75,7 @@
 </ol>
 
 <h3>
-<a name="-%E6%89%A9%E5%B1%95%E9%9C%80%E6%B1%82" class="anchor" href="#-%E6%89%A9%E5%B1%95%E9%9C%80%E6%B1%82"><span class="octicon octicon-link"></span></a>② 扩展需求：</h3>
+<a id="-扩展需求" class="anchor" href="#-%E6%89%A9%E5%B1%95%E9%9C%80%E6%B1%82" aria-hidden="true"><span class="octicon octicon-link"></span></a>② 扩展需求：</h3>
 
 <ol>
 <li>suggestion数据来时百度（jsonp跨域请求js）</li>
@@ -83,7 +86,7 @@
 <hr>
 
 <h2>
-<a name="%E4%BA%8C%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90" class="anchor" href="#%E4%BA%8C%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90"><span class="octicon octicon-link"></span></a>二、技术分析</h2>
+<a id="二技术分析" class="anchor" href="#%E4%BA%8C%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90" aria-hidden="true"><span class="octicon octicon-link"></span></a>二、技术分析</h2>
 
 <ol>
 <li>根据suggestion字段内容，动态生成对应的suggestion下拉框，这里需要用到Dom节点的操作。</li>
@@ -96,7 +99,7 @@
 <hr>
 
 <h2>
-<a name="%E4%B8%89%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7" class="anchor" href="#%E4%B8%89%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7"><span class="octicon octicon-link"></span></a>三、开发工具</h2>
+<a id="三开发工具" class="anchor" href="#%E4%B8%89%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7" aria-hidden="true"><span class="octicon octicon-link"></span></a>三、开发工具</h2>
 
 <ol>
 <li>Sublime Text</li>
@@ -106,10 +109,10 @@
 <hr>
 
 <h2>
-<a name="%E5%9B%9B%E5%85%B7%E4%BD%93%E7%9A%84%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B" class="anchor" href="#%E5%9B%9B%E5%85%B7%E4%BD%93%E7%9A%84%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B"><span class="octicon octicon-link"></span></a>四、具体的实现过程</h2>
+<a id="四具体的实现过程" class="anchor" href="#%E5%9B%9B%E5%85%B7%E4%BD%93%E7%9A%84%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>四、具体的实现过程</h2>
 
 <h3>
-<a name="-%E9%9B%8F%E5%BD%A2%E9%98%B6%E6%AE%B5suggestion%E6%95%B0%E6%8D%AE%E6%9D%A5%E8%87%AA%E6%9C%AC%E5%9C%B0" class="anchor" href="#-%E9%9B%8F%E5%BD%A2%E9%98%B6%E6%AE%B5suggestion%E6%95%B0%E6%8D%AE%E6%9D%A5%E8%87%AA%E6%9C%AC%E5%9C%B0"><span class="octicon octicon-link"></span></a>① 雏形阶段（suggestion数据来自本地）</h3>
+<a id="-雏形阶段suggestion数据来自本地" class="anchor" href="#-%E9%9B%8F%E5%BD%A2%E9%98%B6%E6%AE%B5suggestion%E6%95%B0%E6%8D%AE%E6%9D%A5%E8%87%AA%E6%9C%AC%E5%9C%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>① 雏形阶段（suggestion数据来自本地）</h3>
 
 <ol>
 <li>构建基本页面
@@ -117,16 +120,15 @@
 </li>
 </ol>
 
-<div class="highlight highlight-html"><pre><span class="nt">&lt;form</span> <span class="na">id=</span><span class="s">"form"</span> <span class="na">name=</span><span class="s">"myForm"</span><span class="nt">&gt;</span>  
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"span_search"</span><span class="nt">&gt;</span>  
-        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input_search"</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">maxlength=</span><span class="s">"100"</span> <span class="na">name=</span><span class="s">"value_search"</span> <span class="na">onkeyup=</span><span class="s">"keyEvent(event);"</span><span class="nt">&gt;</span>  
-        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"suggestion_div"</span><span class="nt">&gt;</span>   
-            <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"suggestions_ul"</span><span class="nt">&gt;&lt;/ul&gt;</span>   
-        <span class="nt">&lt;/div&gt;</span>   
-    <span class="nt">&lt;/div&gt;</span>  
-    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"input_button"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"百度一下"</span> <span class="nt">&gt;</span>  
-<span class="nt">&lt;/form&gt;</span>  
-</pre></div>
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">form</span> <span class="pl-e">id</span>=<span class="pl-s1"><span class="pl-pds">"</span>form<span class="pl-pds">"</span></span> <span class="pl-e">name</span>=<span class="pl-s1"><span class="pl-pds">"</span>myForm<span class="pl-pds">"</span></span>&gt;  
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s1"><span class="pl-pds">"</span>span_search<span class="pl-pds">"</span></span>&gt;  
+        &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s1"><span class="pl-pds">"</span>input_search<span class="pl-pds">"</span></span> <span class="pl-e">autocomplete</span>=<span class="pl-s1"><span class="pl-pds">"</span>off<span class="pl-pds">"</span></span> <span class="pl-e">maxlength</span>=<span class="pl-s1"><span class="pl-pds">"</span>100<span class="pl-pds">"</span></span> <span class="pl-e">name</span>=<span class="pl-s1"><span class="pl-pds">"</span>value_search<span class="pl-pds">"</span></span> <span class="pl-e">onkeyup</span>=<span class="pl-s1"><span class="pl-pds">"</span>keyEvent(event);<span class="pl-pds">"</span></span>&gt;  
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s1"><span class="pl-pds">"</span>suggestion_div<span class="pl-pds">"</span></span>&gt;   
+            &lt;<span class="pl-ent">ul</span> <span class="pl-e">id</span>=<span class="pl-s1"><span class="pl-pds">"</span>suggestions_ul<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">ul</span>&gt;   
+        &lt;/<span class="pl-ent">div</span>&gt;   
+    &lt;/<span class="pl-ent">div</span>&gt;  
+    &lt;<span class="pl-ent">input</span> <span class="pl-e">id</span>=<span class="pl-s1"><span class="pl-pds">"</span>input_button<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>submit<span class="pl-pds">"</span></span> <span class="pl-e">value</span>=<span class="pl-s1"><span class="pl-pds">"</span>百度一下<span class="pl-pds">"</span></span> &gt;  
+&lt;/<span class="pl-ent">form</span>&gt;  </pre></div>
 
 <ol>
 <li>动态添加下拉框
@@ -134,98 +136,91 @@
 </li>
 </ol>
 
-<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">inputField</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">forms</span><span class="p">[</span><span class="s2">"myForm"</span><span class="p">].</span><span class="nx">input_search</span><span class="p">;</span>  
-<span class="kd">var</span> <span class="nx">suggestionDiv</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"suggestion_div"</span><span class="p">);</span>  
-<span class="kd">var</span> <span class="nx">suggestionsUl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"suggestions_ul"</span><span class="p">);</span>   
-<span class="kd">var</span> <span class="nx">suggestionLi</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span> 
-</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> inputField <span class="pl-k">=</span> <span class="pl-s3">document</span>.<span class="pl-sc">forms</span>[<span class="pl-s1"><span class="pl-pds">"</span>myForm<span class="pl-pds">"</span></span>].input_search;  
+<span class="pl-s">var</span> suggestionDiv <span class="pl-k">=</span> <span class="pl-s3">document</span>.<span class="pl-s3">getElementById</span>(<span class="pl-s1"><span class="pl-pds">"</span>suggestion_div<span class="pl-pds">"</span></span>);  
+<span class="pl-s">var</span> suggestionsUl <span class="pl-k">=</span> <span class="pl-s3">document</span>.<span class="pl-s3">getElementById</span>(<span class="pl-s1"><span class="pl-pds">"</span>suggestions_ul<span class="pl-pds">"</span></span>);   
+<span class="pl-s">var</span> suggestionLi <span class="pl-k">=</span> <span class="pl-c1">null</span>; </pre></div>
 
 <p><em>2）初始化数据源</em></p>
 
-<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">suggestion</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"abcde"</span><span class="p">,</span><span class="s2">"华南理工大学"</span><span class="p">,</span><span class="s2">"abcd"</span><span class="p">,</span><span class="s2">"华南师范大学"</span><span class="p">,</span><span class="s2">"abcdefg"</span><span class="p">,</span><span class="s2">"华南农业大学"</span><span class="p">,</span><span class="s2">"abcdefgh"</span><span class="p">,</span><span class="s2">"广东工业大学"</span><span class="p">,</span><span class="s2">"广东外语外贸大学"</span><span class="p">,</span><span class="s2">"计算机科学与技术"</span><span class="p">,</span><span class="s2">"广东财经大学"</span><span class="p">,</span><span class="s2">"计算机学院"</span><span class="p">,</span><span class="s2">"广州医科大学"</span><span class="p">,</span><span class="s2">"计算机"</span><span class="p">,</span><span class="s2">"广州大学"</span><span class="p">];</span><span class="c1">//模拟的数据源  </span>
-<span class="nx">suggestion</span><span class="p">.</span><span class="nx">sort</span><span class="p">();</span> <span class="c1">// 按字母排序，使显示结果更友好  </span>
-</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> suggestion <span class="pl-k">=</span> [<span class="pl-s1"><span class="pl-pds">"</span>abcde<span class="pl-pds">"</span></span>,<span class="pl-s1"><span class="pl-pds">"</span>华南理工大学<span class="pl-pds">"</span></span>,<span class="pl-s1"><span class="pl-pds">"</span>abcd<span class="pl-pds">"</span></span>,<span class="pl-s1"><span class="pl-pds">"</span>华南师范大学<span class="pl-pds">"</span></span>,<span class="pl-s1"><span class="pl-pds">"</span>abcdefg<span class="pl-pds">"</span></span>,<span class="pl-s1"><span class="pl-pds">"</span>华南农业大学<span class="pl-pds">"</span></span>,<span class="pl-s1"><span class="pl-pds">"</span>abcdefgh<span class="pl-pds">"</span></span>,<span class="pl-s1"><span class="pl-pds">"</span>广东工业大学<span class="pl-pds">"</span></span>,<span class="pl-s1"><span class="pl-pds">"</span>广东外语外贸大学<span class="pl-pds">"</span></span>,<span class="pl-s1"><span class="pl-pds">"</span>计算机科学与技术<span class="pl-pds">"</span></span>,<span class="pl-s1"><span class="pl-pds">"</span>广东财经大学<span class="pl-pds">"</span></span>,<span class="pl-s1"><span class="pl-pds">"</span>计算机学院<span class="pl-pds">"</span></span>,<span class="pl-s1"><span class="pl-pds">"</span>广州医科大学<span class="pl-pds">"</span></span>,<span class="pl-s1"><span class="pl-pds">"</span>计算机<span class="pl-pds">"</span></span>,<span class="pl-s1"><span class="pl-pds">"</span>广州大学<span class="pl-pds">"</span></span>];<span class="pl-c">//模拟的数据源  </span>
+suggestion.<span class="pl-s3">sort</span>(); <span class="pl-c">// 按字母排序，使显示结果更友好  </span></pre></div>
 
 <p><em>3）动态生成下拉列表</em></p>
 
-<div class="highlight highlight-javascript"><pre><span class="kd">function</span> <span class="nx">setSuggestions</span><span class="p">(</span><span class="nx">the_suggestions</span><span class="p">)</span> <span class="p">{</span><span class="c1">// 动态生成suggestion下拉框  </span>
-    <span class="nx">clearSuggestions</span><span class="p">();</span> <span class="c1">// 每输入一个字符就先清除原先的提示  </span>
-    <span class="nx">suggestionDiv</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="s2">"show"</span><span class="p">;</span>  
-    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">the_suggestions</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span><span class="c1">// 将匹配的提示结果逐一显示给用户  </span>
-        <span class="nx">suggestionLi</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">"li"</span><span class="p">);</span>  
-        <span class="nx">suggestionsUl</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">suggestionLi</span><span class="p">);</span>  
-        <span class="nx">suggestionLi</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">createTextNode</span><span class="p">(</span><span class="nx">the_suggestions</span><span class="p">[</span><span class="nx">i</span><span class="p">]));</span>  
-        <span class="nx">mouseEvent</span><span class="p">();</span><span class="c1">// 对每个&lt;li&gt;触发鼠标事件  </span>
-    <span class="p">}</span>  
-<span class="p">}</span>  
-</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="pl-st">function</span> <span class="pl-en">setSuggestions</span>(<span class="pl-vpf">the_suggestions</span>) {<span class="pl-c">// 动态生成suggestion下拉框  </span>
+    clearSuggestions(); <span class="pl-c">// 每输入一个字符就先清除原先的提示  </span>
+    suggestionDiv.<span class="pl-sc">className</span> <span class="pl-k">=</span> <span class="pl-s1"><span class="pl-pds">"</span>show<span class="pl-pds">"</span></span>;  
+    <span class="pl-k">for</span> (<span class="pl-s">var</span> i <span class="pl-k">=</span> <span class="pl-c1">0</span>; i <span class="pl-k">&lt;</span> the_suggestions.<span class="pl-sc">length</span>; i<span class="pl-k">++</span>) {<span class="pl-c">// 将匹配的提示结果逐一显示给用户  </span>
+        suggestionLi <span class="pl-k">=</span> <span class="pl-s3">document</span>.<span class="pl-s3">createElement</span>(<span class="pl-s1"><span class="pl-pds">"</span>li<span class="pl-pds">"</span></span>);  
+        suggestionsUl.<span class="pl-s3">appendChild</span>(suggestionLi);  
+        suggestionLi.<span class="pl-s3">appendChild</span>(<span class="pl-s3">document</span>.<span class="pl-s3">createTextNode</span>(the_suggestions[i]));  
+        mouseEvent();<span class="pl-c">// 对每个&lt;li&gt;触发鼠标事件  </span>
+    }  
+}  </pre></div>
 
 <p><em>4）鼠标事件</em></p>
 
-<div class="highlight highlight-javascript"><pre><span class="kd">function</span> <span class="nx">mouseEvent</span><span class="p">(){</span>  
-    <span class="nx">suggestionLi</span><span class="p">.</span><span class="nx">onmouseover</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>  
-        <span class="k">this</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="s2">"mouseOver"</span><span class="p">;</span> <span class="c1">// 鼠标经过时高亮  </span>
-        <span class="nx">inputField</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstChild</span><span class="p">.</span><span class="nx">nodeValue</span><span class="p">;</span><span class="c1">// 同时将当前的选中值赋值给百度输入框  </span>
-    <span class="p">}</span>  
-    <span class="nx">suggestionLi</span><span class="p">.</span><span class="nx">onmouseout</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>  
-        <span class="k">this</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="s2">"mouseOut"</span><span class="p">;</span> <span class="c1">// 离开时恢复原样  </span>
-    <span class="p">}</span>  
-    <span class="nx">suggestionLi</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span><span class="c1">// 用户点击某个匹配项时清除提示框  </span>
-        <span class="nx">clearSuggestions</span><span class="p">();</span>   
-    <span class="p">}</span>  
-<span class="p">}</span>  
-</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="pl-st">function</span> <span class="pl-en">mouseEvent</span>(){  
+    <span class="pl-s3">suggestionLi</span>.<span class="pl-en">onmouseover</span> <span class="pl-k">=</span> <span class="pl-st">function</span>() {  
+        <span class="pl-v">this</span>.<span class="pl-sc">className</span> <span class="pl-k">=</span> <span class="pl-s1"><span class="pl-pds">"</span>mouseOver<span class="pl-pds">"</span></span>; <span class="pl-c">// 鼠标经过时高亮  </span>
+        inputField.<span class="pl-sc">value</span> <span class="pl-k">=</span> <span class="pl-v">this</span>.<span class="pl-sc">firstChild</span>.<span class="pl-sc">nodeValue</span>;<span class="pl-c">// 同时将当前的选中值赋值给百度输入框  </span>
+    }  
+    <span class="pl-s3">suggestionLi</span>.<span class="pl-en">onmouseout</span> <span class="pl-k">=</span> <span class="pl-st">function</span>() {  
+        <span class="pl-v">this</span>.<span class="pl-sc">className</span> <span class="pl-k">=</span> <span class="pl-s1"><span class="pl-pds">"</span>mouseOut<span class="pl-pds">"</span></span>; <span class="pl-c">// 离开时恢复原样  </span>
+    }  
+    <span class="pl-s3">suggestionLi</span>.<span class="pl-en">onclick</span> <span class="pl-k">=</span> <span class="pl-st">function</span>() {<span class="pl-c">// 用户点击某个匹配项时清除提示框  </span>
+        clearSuggestions();   
+    }  
+}  </pre></div>
 
 <p><em>5）键盘事件</em></p>
 
 <h5>
-<a name="%E8%BF%99%E4%B8%AA%E9%94%AE%E7%9B%98%E4%B8%8A%E4%B8%8B%E9%94%AE%E5%88%87%E6%8D%A2%E6%98%AF%E6%88%91%E5%9C%A8%E5%86%99%E9%9B%8F%E5%BD%A2%E7%89%88%E6%97%B6%E5%86%99%E5%BE%97%E7%9B%B8%E5%AF%B9%E6%AF%94%E8%BE%83%E4%B9%85%E7%9A%84%E4%B8%80%E4%B8%AA%E5%8A%9F%E8%83%BD%E5%88%9A%E5%BC%80%E5%A7%8B%E6%83%B3%E5%88%B0%E5%88%A9%E7%94%A8%E4%B8%80%E4%B8%AA%E6%A0%87%E8%AE%B0%E5%8F%98%E9%87%8F%E6%9D%A5%E8%BF%9B%E8%A1%8C%E5%88%87%E6%8D%A2%E5%90%8E%E6%9D%A5%E5%8F%91%E7%8E%B0%E8%87%AA%E5%B7%B1%E8%B6%8A%E5%86%99%E8%B6%8A%E5%A4%8D%E6%9D%82%E5%B0%B1%E5%8F%AA%E5%A5%BD%E7%99%BE%E5%BA%A6%E4%BA%86%E5%90%8E%E6%9D%A5%E5%8F%91%E7%8E%B0%E7%94%A8%E7%B4%A2%E5%BC%95%E5%80%BC%E6%9B%B4%E5%A5%BD%E7%94%A8%E7%B4%A2%E5%BC%95%E5%80%BC%E5%B0%B1%E5%8F%AF%E4%BB%A5%E6%A0%87%E8%AE%B0%E6%AF%8F%E4%B8%80%E4%B8%AA%E4%B8%8D%E5%90%8C%E7%9A%84li" class="anchor" href="#%E8%BF%99%E4%B8%AA%E9%94%AE%E7%9B%98%E4%B8%8A%E4%B8%8B%E9%94%AE%E5%88%87%E6%8D%A2%E6%98%AF%E6%88%91%E5%9C%A8%E5%86%99%E9%9B%8F%E5%BD%A2%E7%89%88%E6%97%B6%E5%86%99%E5%BE%97%E7%9B%B8%E5%AF%B9%E6%AF%94%E8%BE%83%E4%B9%85%E7%9A%84%E4%B8%80%E4%B8%AA%E5%8A%9F%E8%83%BD%E5%88%9A%E5%BC%80%E5%A7%8B%E6%83%B3%E5%88%B0%E5%88%A9%E7%94%A8%E4%B8%80%E4%B8%AA%E6%A0%87%E8%AE%B0%E5%8F%98%E9%87%8F%E6%9D%A5%E8%BF%9B%E8%A1%8C%E5%88%87%E6%8D%A2%E5%90%8E%E6%9D%A5%E5%8F%91%E7%8E%B0%E8%87%AA%E5%B7%B1%E8%B6%8A%E5%86%99%E8%B6%8A%E5%A4%8D%E6%9D%82%E5%B0%B1%E5%8F%AA%E5%A5%BD%E7%99%BE%E5%BA%A6%E4%BA%86%E5%90%8E%E6%9D%A5%E5%8F%91%E7%8E%B0%E7%94%A8%E7%B4%A2%E5%BC%95%E5%80%BC%E6%9B%B4%E5%A5%BD%E7%94%A8%E7%B4%A2%E5%BC%95%E5%80%BC%E5%B0%B1%E5%8F%AF%E4%BB%A5%E6%A0%87%E8%AE%B0%E6%AF%8F%E4%B8%80%E4%B8%AA%E4%B8%8D%E5%90%8C%E7%9A%84li"><span class="octicon octicon-link"></span></a>这个键盘上下键切换是我在写雏形版时写得相对比较久的一个功能，刚开始想到利用一个标记变量来进行切换，后来发现自己越写越复杂，就只好百度了，后来发现用索引值更好，用索引值就可以标记每一个不同的<code>&lt;li&gt;</code>
+<a id="这个键盘上下键切换是我在写雏形版时写得相对比较久的一个功能刚开始想到利用一个标记变量来进行切换后来发现自己越写越复杂就只好百度了后来发现用索引值更好用索引值就可以标记每一个不同的li" class="anchor" href="#%E8%BF%99%E4%B8%AA%E9%94%AE%E7%9B%98%E4%B8%8A%E4%B8%8B%E9%94%AE%E5%88%87%E6%8D%A2%E6%98%AF%E6%88%91%E5%9C%A8%E5%86%99%E9%9B%8F%E5%BD%A2%E7%89%88%E6%97%B6%E5%86%99%E5%BE%97%E7%9B%B8%E5%AF%B9%E6%AF%94%E8%BE%83%E4%B9%85%E7%9A%84%E4%B8%80%E4%B8%AA%E5%8A%9F%E8%83%BD%E5%88%9A%E5%BC%80%E5%A7%8B%E6%83%B3%E5%88%B0%E5%88%A9%E7%94%A8%E4%B8%80%E4%B8%AA%E6%A0%87%E8%AE%B0%E5%8F%98%E9%87%8F%E6%9D%A5%E8%BF%9B%E8%A1%8C%E5%88%87%E6%8D%A2%E5%90%8E%E6%9D%A5%E5%8F%91%E7%8E%B0%E8%87%AA%E5%B7%B1%E8%B6%8A%E5%86%99%E8%B6%8A%E5%A4%8D%E6%9D%82%E5%B0%B1%E5%8F%AA%E5%A5%BD%E7%99%BE%E5%BA%A6%E4%BA%86%E5%90%8E%E6%9D%A5%E5%8F%91%E7%8E%B0%E7%94%A8%E7%B4%A2%E5%BC%95%E5%80%BC%E6%9B%B4%E5%A5%BD%E7%94%A8%E7%B4%A2%E5%BC%95%E5%80%BC%E5%B0%B1%E5%8F%AF%E4%BB%A5%E6%A0%87%E8%AE%B0%E6%AF%8F%E4%B8%80%E4%B8%AA%E4%B8%8D%E5%90%8C%E7%9A%84li" aria-hidden="true"><span class="octicon octicon-link"></span></a>这个键盘上下键切换是我在写雏形版时写得相对比较久的一个功能，刚开始想到利用一个标记变量来进行切换，后来发现自己越写越复杂，就只好百度了，后来发现用索引值更好，用索引值就可以标记每一个不同的<code>&lt;li&gt;</code>
 </h5>
 
 <h5>
-<a name="%E5%90%91%E4%B8%8A%E5%88%87%E6%8D%A2%E7%9A%84%E5%85%B3%E9%94%AE%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86" class="anchor" href="#%E5%90%91%E4%B8%8A%E5%88%87%E6%8D%A2%E7%9A%84%E5%85%B3%E9%94%AE%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86"><span class="octicon octicon-link"></span></a>向上切换的关键代码部分：</h5>
+<a id="向上切换的关键代码部分" class="anchor" href="#%E5%90%91%E4%B8%8A%E5%88%87%E6%8D%A2%E7%9A%84%E5%85%B3%E9%94%AE%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86" aria-hidden="true"><span class="octicon octicon-link"></span></a>向上切换的关键代码部分：</h5>
 
-<div class="highlight highlight-javascript"><pre><span class="nx">suggestionNodes</span><span class="p">.</span><span class="nx">eq</span><span class="p">(</span><span class="nx">selectedSuggestion</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">"background-color"</span><span class="p">,</span> <span class="s2">"white"</span><span class="p">);</span><span class="c1">//先将上面一个&lt;li&gt;变成白色  </span>
-<span class="nx">selectedSuggestion</span><span class="o">++</span><span class="p">;</span> <span class="c1">// 每向下移一位，selectedSuggestion就+1  </span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">selectedSuggestion</span> <span class="o">==</span> <span class="nx">suggestionNodes</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>  
-    <span class="nx">selectedSuggestion</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="c1">//如果索引值变成suggestionNodes.length，则将索引值指向第一个元素  </span>
-<span class="p">}</span>  
-<span class="c1">//console.log(selectedSuggestion);  </span>
-<span class="nx">suggestionNodes</span><span class="p">.</span><span class="nx">eq</span><span class="p">(</span><span class="nx">selectedSuggestion</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">"background-color"</span><span class="p">,</span> <span class="s2">"#ebebeb"</span><span class="p">);</span><span class="c1">//再将下面一个&lt;li&gt;变成灰色  </span>
-</pre></div>
+<div class="highlight highlight-javascript"><pre>suggestionNodes.eq(selectedSuggestion).css(<span class="pl-s1"><span class="pl-pds">"</span>background-color<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>white<span class="pl-pds">"</span></span>);<span class="pl-c">//先将上面一个&lt;li&gt;变成白色  </span>
+selectedSuggestion<span class="pl-k">++</span>; <span class="pl-c">// 每向下移一位，selectedSuggestion就+1  </span>
+<span class="pl-k">if</span> (selectedSuggestion <span class="pl-k">==</span> suggestionNodes.<span class="pl-sc">length</span>) {  
+    selectedSuggestion <span class="pl-k">=</span> <span class="pl-c1">0</span>;<span class="pl-c">//如果索引值变成suggestionNodes.length，则将索引值指向第一个元素  </span>
+}  
+<span class="pl-c">//console.log(selectedSuggestion);  </span>
+suggestionNodes.eq(selectedSuggestion).css(<span class="pl-s1"><span class="pl-pds">"</span>background-color<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>#ebebeb<span class="pl-pds">"</span></span>);<span class="pl-c">//再将下面一个&lt;li&gt;变成灰色  </span></pre></div>
 
 <h5>
-<a name="%E5%90%91%E4%B8%8B%E5%88%87%E6%8D%A2%E7%9A%84%E5%85%B3%E9%94%AE%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86" class="anchor" href="#%E5%90%91%E4%B8%8B%E5%88%87%E6%8D%A2%E7%9A%84%E5%85%B3%E9%94%AE%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86"><span class="octicon octicon-link"></span></a>向下切换的关键代码部分：</h5>
+<a id="向下切换的关键代码部分" class="anchor" href="#%E5%90%91%E4%B8%8B%E5%88%87%E6%8D%A2%E7%9A%84%E5%85%B3%E9%94%AE%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86" aria-hidden="true"><span class="octicon octicon-link"></span></a>向下切换的关键代码部分：</h5>
 
-<div class="highlight highlight-javascript"><pre><span class="nx">suggestionNodes</span><span class="p">.</span><span class="nx">eq</span><span class="p">(</span><span class="nx">selectedSuggestion</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">"background-color"</span><span class="p">,</span> <span class="s2">"white"</span><span class="p">);</span><span class="c1">//先将下面一个&lt;li&gt;变成白色  </span>
-<span class="nx">selectedSuggestion</span><span class="o">--</span><span class="p">;</span><span class="c1">// 每向上移一位，selectedSuggestion就-1  </span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">selectedSuggestion</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>  
-    <span class="nx">selectedSuggestion</span> <span class="o">=</span> <span class="nx">suggestionNodes</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span><span class="c1">//如果索引值变成-1，则将索引值指向最后一个元素  </span>
-<span class="p">}</span>  
-<span class="c1">//console.log(selectedSuggestion);  </span>
-<span class="nx">suggestionNodes</span><span class="p">.</span><span class="nx">eq</span><span class="p">(</span><span class="nx">selectedSuggestion</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">"background-color"</span><span class="p">,</span> <span class="s2">"#ebebeb"</span><span class="p">);</span><span class="c1">//再将上面一个&lt;li&gt;变成灰色    </span>
-</pre></div>
+<div class="highlight highlight-javascript"><pre>suggestionNodes.eq(selectedSuggestion).css(<span class="pl-s1"><span class="pl-pds">"</span>background-color<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>white<span class="pl-pds">"</span></span>);<span class="pl-c">//先将下面一个&lt;li&gt;变成白色  </span>
+selectedSuggestion<span class="pl-k">--</span>;<span class="pl-c">// 每向上移一位，selectedSuggestion就-1  </span>
+<span class="pl-k">if</span> (selectedSuggestion <span class="pl-k">==</span> <span class="pl-k">-</span><span class="pl-c1">1</span>) {  
+    selectedSuggestion <span class="pl-k">=</span> suggestionNodes.<span class="pl-sc">length</span> <span class="pl-k">-</span> <span class="pl-c1">1</span>;<span class="pl-c">//如果索引值变成-1，则将索引值指向最后一个元素  </span>
+}  
+<span class="pl-c">//console.log(selectedSuggestion);  </span>
+suggestionNodes.eq(selectedSuggestion).css(<span class="pl-s1"><span class="pl-pds">"</span>background-color<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>#ebebeb<span class="pl-pds">"</span></span>);<span class="pl-c">//再将上面一个&lt;li&gt;变成灰色    </span></pre></div>
 
 <p><em>6）动态显示下拉框</em></p>
 
 <h5>
-<a name="%E5%85%B3%E9%94%AE%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5" class="anchor" href="#%E5%85%B3%E9%94%AE%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5"><span class="octicon octicon-link"></span></a>关键代码片段：</h5>
+<a id="关键代码片段" class="anchor" href="#%E5%85%B3%E9%94%AE%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>关键代码片段：</h5>
 
-<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">aResult</span> <span class="o">=</span> <span class="p">[];</span> <span class="c1">// 用于存放匹配结果  </span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">inputField</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>  
-    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">suggestion</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span> <span class="c1">// 从数据源中找匹配的数据  </span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">suggestion</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">inputField</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>  
-            <span class="nx">aResult</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">suggestion</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span> <span class="c1">// 压入结果  </span>
-        <span class="p">}</span>   
-    <span class="p">}</span>  
-    <span class="k">if</span> <span class="p">(</span><span class="nx">aResult</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">// 如果有匹配的数据则显示出来  </span>
-        <span class="nx">setSuggestions</span><span class="p">(</span><span class="nx">aResult</span><span class="p">);</span>  
-<span class="p">}</span><span class="k">else</span>  
-<span class="nx">clearSuggestions</span><span class="p">();</span> <span class="c1">// 此步用作用户输入（Backspace健）将输入框清除完时的处理  </span>
-</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> aResult <span class="pl-k">=</span> []; <span class="pl-c">// 用于存放匹配结果  </span>
+<span class="pl-k">if</span> (inputField.<span class="pl-sc">value</span>.<span class="pl-sc">length</span> <span class="pl-k">&gt;</span> <span class="pl-c1">0</span>) {  
+    <span class="pl-k">for</span> (<span class="pl-s">var</span> i <span class="pl-k">=</span> <span class="pl-c1">0</span>; i <span class="pl-k">&lt;</span> suggestion.<span class="pl-sc">length</span>; i<span class="pl-k">++</span>){ <span class="pl-c">// 从数据源中找匹配的数据  </span>
+        <span class="pl-k">if</span> (suggestion[i].<span class="pl-s3">indexOf</span>(inputField.<span class="pl-sc">value</span>) <span class="pl-k">==</span> <span class="pl-c1">0</span>){  
+            aResult.<span class="pl-s3">push</span>(suggestion[i]); <span class="pl-c">// 压入结果  </span>
+        }   
+    }  
+    <span class="pl-k">if</span> (aResult.<span class="pl-sc">length</span> <span class="pl-k">&gt;</span> <span class="pl-c1">0</span>) <span class="pl-c">// 如果有匹配的数据则显示出来  </span>
+        setSuggestions(aResult);  
+}<span class="pl-k">else</span>  
+clearSuggestions(); <span class="pl-c">// 此步用作用户输入（Backspace健）将输入框清除完时的处理  </span></pre></div>
 
 <h5>
-<a name="%E4%BB%A5%E4%B8%8A%E4%B8%BA%E9%9B%8F%E5%BD%A2%E9%98%B6%E6%AE%B5%E7%9A%84%E5%AE%9E%E7%8E%B0" class="anchor" href="#%E4%BB%A5%E4%B8%8A%E4%B8%BA%E9%9B%8F%E5%BD%A2%E9%98%B6%E6%AE%B5%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="octicon octicon-link"></span></a>以上为雏形阶段的实现</h5>
+<a id="以上为雏形阶段的实现" class="anchor" href="#%E4%BB%A5%E4%B8%8A%E4%B8%BA%E9%9B%8F%E5%BD%A2%E9%98%B6%E6%AE%B5%E7%9A%84%E5%AE%9E%E7%8E%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>以上为雏形阶段的实现</h5>
 
 <ol>
 <li>雏形阶段的最终结果
@@ -238,7 +233,7 @@
 </ol>
 
 <h3>
-<a name="%E6%88%90%E7%86%9F%E9%98%B6%E6%AE%B5%E5%8F%91jsonp%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82js" class="anchor" href="#%E6%88%90%E7%86%9F%E9%98%B6%E6%AE%B5%E5%8F%91jsonp%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82js"><span class="octicon octicon-link"></span></a>②成熟阶段（发jsonp，跨域请求js）</h3>
+<a id="成熟阶段发jsonp跨域请求js" class="anchor" href="#%E6%88%90%E7%86%9F%E9%98%B6%E6%AE%B5%E5%8F%91jsonp%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82js" aria-hidden="true"><span class="octicon octicon-link"></span></a>②成熟阶段（发jsonp，跨域请求js）</h3>
 
 <ol>
 <li>自己的一些想法
@@ -256,42 +251,39 @@
 </li>
 </ol>
 
-<div class="highlight highlight-javascript"><pre><span class="nb">window</span><span class="p">.</span><span class="nx">baidu</span><span class="p">.</span><span class="nx">sug</span><span class="p">({</span><span class="nx">q</span><span class="o">:</span><span class="s2">""</span><span class="p">,</span><span class="nx">p</span><span class="o">:</span><span class="kc">false</span><span class="p">,</span><span class="nx">s</span><span class="o">:</span><span class="p">[]});</span> 
-</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="pl-s3">window</span>.baidu.sug({q<span class="pl-k">:</span><span class="pl-s1"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,p<span class="pl-k">:</span><span class="pl-c1">false</span>,s<span class="pl-k">:</span>[]}); </pre></div>
 
 <p>数组里面就是我们需要的suggestion数据。于是，发jsonp，跨域请求js，就可以获取到suggestion数据。</p>
 
-<div class="highlight highlight-javascript"><pre><span class="kd">function</span> <span class="nx">fillUrls</span><span class="p">()</span> <span class="p">{</span>  
-    <span class="kd">var</span> <span class="nx">strdomin</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">trim</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">"#input_search"</span><span class="p">).</span><span class="nx">val</span><span class="p">());</span>  
-    <span class="kd">var</span> <span class="nx">qsData</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">'wd'</span><span class="o">:</span> <span class="nx">strdomin</span><span class="p">,</span> <span class="s1">'p'</span><span class="o">:</span> <span class="s1">'3'</span><span class="p">,</span> <span class="s1">'cb'</span><span class="o">:</span> <span class="s1">'findSuggestions'</span><span class="p">,</span> <span class="s1">'t'</span><span class="o">:</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">getMilliseconds</span><span class="p">().</span><span class="nx">toString</span><span class="p">()</span> <span class="p">};</span>  
-  <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span><span class="c1">// 发jsonp（跨域请求js）  </span>
-        <span class="nx">async</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  
-        <span class="nx">url</span><span class="o">:</span> <span class="s2">"http://suggestion.baidu.com/su"</span><span class="p">,</span>  
-        <span class="nx">type</span><span class="o">:</span> <span class="s2">"GET"</span><span class="p">,</span>  
-        <span class="nx">dataType</span><span class="o">:</span> <span class="s1">'jsonp'</span><span class="p">,</span>  
-        <span class="nx">jsonp</span><span class="o">:</span> <span class="s1">'jsoncallback'</span><span class="p">,</span>  
-        <span class="nx">data</span><span class="o">:</span> <span class="nx">qsData</span><span class="p">,</span>  
-        <span class="nx">timeout</span><span class="o">:</span> <span class="mi">500</span><span class="p">,</span>  
-        <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">json</span><span class="p">)</span> <span class="p">{</span>  
-        <span class="p">},</span>  
-        <span class="nx">error</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">xhr</span><span class="p">)</span> <span class="p">{</span>  
-            <span class="nx">alert</span><span class="p">(</span><span class="nx">xhr</span><span class="p">);</span>  
-        <span class="p">}</span>  
-    <span class="p">});</span>  
-<span class="p">}</span>  
-</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="pl-st">function</span> <span class="pl-en">fillUrls</span>() {  
+    <span class="pl-s">var</span> strdomin <span class="pl-k">=</span> $.trim($(<span class="pl-s1"><span class="pl-pds">"</span>#input_search<span class="pl-pds">"</span></span>).val());  
+    <span class="pl-s">var</span> qsData <span class="pl-k">=</span> { <span class="pl-s1"><span class="pl-pds">'</span>wd<span class="pl-pds">'</span></span><span class="pl-k">:</span> strdomin, <span class="pl-s1"><span class="pl-pds">'</span>p<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>3<span class="pl-pds">'</span></span>, <span class="pl-s1"><span class="pl-pds">'</span>cb<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>findSuggestions<span class="pl-pds">'</span></span>, <span class="pl-s1"><span class="pl-pds">'</span>t<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-k">new</span> <span class="pl-en">Date</span>().<span class="pl-s3">getMilliseconds</span>().<span class="pl-s3">toString</span>() };  
+  $.ajax({<span class="pl-c">// 发jsonp（跨域请求js）  </span>
+        async<span class="pl-k">:</span> <span class="pl-c1">false</span>,  
+        url<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">"</span>http://suggestion.baidu.com/su<span class="pl-pds">"</span></span>,  
+        type<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">"</span>GET<span class="pl-pds">"</span></span>,  
+        dataType<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>jsonp<span class="pl-pds">'</span></span>,  
+        jsonp<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>jsoncallback<span class="pl-pds">'</span></span>,  
+        data<span class="pl-k">:</span> qsData,  
+        timeout<span class="pl-k">:</span> <span class="pl-c1">500</span>,  
+        <span class="pl-en">success</span>: <span class="pl-st">function</span> (<span class="pl-vpf">json</span>) {  
+        },  
+        <span class="pl-en">error</span>: <span class="pl-st">function</span> (<span class="pl-vpf">xhr</span>) {  
+            <span class="pl-s3">alert</span>(xhr);  
+        }  
+    });  
+}  </pre></div>
 
 <p>用一个变量去接收suggestion数组里面的数据</p>
 
-<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">urls</span> <span class="o">=</span> <span class="nx">strurls</span><span class="p">.</span><span class="nx">s</span><span class="p">;</span> 
-</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> urls <span class="pl-k">=</span> strurls.s; </pre></div>
 
 <p>最终效果如下
 <img src="http://img.blog.csdn.net/20140914120227406?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltX3RzYW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="">
 用console.dir(strurls)将接收到的数据打印在控制台上也看到了返回的suggestion数据。</p>
 
 <h3>
-<a name="%E5%AE%8C%E6%88%90%E9%98%B6%E6%AE%B5%E5%90%91%E7%99%BE%E5%BA%A6%E5%90%8E%E5%8F%B0%E6%8F%90%E4%BA%A4%E6%90%9C%E7%B4%A2%E5%85%B3%E9%94%AE%E5%AD%97%E8%BF%9B%E8%A1%8C%E6%90%9C%E7%B4%A2" class="anchor" href="#%E5%AE%8C%E6%88%90%E9%98%B6%E6%AE%B5%E5%90%91%E7%99%BE%E5%BA%A6%E5%90%8E%E5%8F%B0%E6%8F%90%E4%BA%A4%E6%90%9C%E7%B4%A2%E5%85%B3%E9%94%AE%E5%AD%97%E8%BF%9B%E8%A1%8C%E6%90%9C%E7%B4%A2"><span class="octicon octicon-link"></span></a>③完成阶段（向百度后台提交搜索关键字进行搜索）</h3>
+<a id="完成阶段向百度后台提交搜索关键字进行搜索" class="anchor" href="#%E5%AE%8C%E6%88%90%E9%98%B6%E6%AE%B5%E5%90%91%E7%99%BE%E5%BA%A6%E5%90%8E%E5%8F%B0%E6%8F%90%E4%BA%A4%E6%90%9C%E7%B4%A2%E5%85%B3%E9%94%AE%E5%AD%97%E8%BF%9B%E8%A1%8C%E6%90%9C%E7%B4%A2" aria-hidden="true"><span class="octicon octicon-link"></span></a>③完成阶段（向百度后台提交搜索关键字进行搜索）</h3>
 
 <ol>
 <li>实现前的一些想法
@@ -317,25 +309,18 @@
 <p><img src="http://img.blog.csdn.net/20140914121819367?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltX3RzYW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="效果图"></p>
 
 <p>发现搜索果然出现了，原来“wd”就是百度后台接受搜索关键字的字段。</p>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/TimTsang/BaiduSuggestion/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/TimTsang/BaiduSuggestion/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/TimTsang/BaiduSuggestion"></a> is maintained by <a href="https://github.com/TimTsang">TimTsang</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+      </section>
     </div>
 
-  
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Baidusuggestion maintained by <a href="https://github.com/TimTsang">TimTsang</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
   </body>
 </html>
